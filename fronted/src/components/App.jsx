@@ -7,9 +7,13 @@ function App() {
 
   return (
     <>
+
+
       <NavBar />
       
+
       <NewsSearch />
+
 
       <AboutAuthor />
     </>
