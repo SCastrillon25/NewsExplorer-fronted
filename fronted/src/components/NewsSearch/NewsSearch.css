@@ -1,0 +1,24 @@
+.newsSearch {
+
+}
+
+.newsSearch__container-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.newsSearch__container-fondo__img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.newsSearch__search {
+    position: relative;
+}
