@@ -1,5 +1,6 @@
 import imageAutor from "../../assets/img.jpg";
- 
+import "./AboutAuthor.css";
+
 function AboutAuthor() {
     return (
         <div className="aboutAuthor">
