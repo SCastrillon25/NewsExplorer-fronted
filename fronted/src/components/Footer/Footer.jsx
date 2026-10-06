@@ -1,17 +1,26 @@
 import logoFace  from "../../assets/face.svg";
 import logoGit from "../../assets/github.svg";
+import "./Footer.css";
 
 function Footer() {
     return (
-        <footer>
+        <footer className="footer">
             <div className="footer__container">
                 <p>&copy; 2026 Supersite. Powered by News API</p>
             </div>
-            <div className="footer__container">
+            <div className="footer__container-logos">
                 <p>Home</p>
-                <p>Practicum by Yandex</p>
-                <img src={logoGit} alt="logoGit" />
-                <img src={logoFace} alt="logoFace" />
+                <a 
+                    className="footer__container-logos__git"
+                    href="https://github.com/SCastrillon25"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Scastrillon25
+                    <img src={logoGit} alt="logoGit" />
+                </a>
+                
+                <img className="footer__container-logos__face" src={logoFace} alt="logoFace" />
             </div>
         </footer>
     );

@@ -10,7 +10,7 @@
     width: 464px;
     height: 464px;
     opacity: 1;
-    margin: 80px 56px 80px;
+    margin: 80px 56px 80px 104px;
 }
 
 .aboutAuthor__container-img__img {
@@ -39,3 +39,4 @@
     letter-spacing: 0px;
     width: 550px;
 }
+

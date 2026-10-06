@@ -1,0 +1,46 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    height: 80px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__container {
+    position: relative;
+    left: 104px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    color: rgba(182, 188, 191, 1);
+}
+
+.footer__container-logos {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 0;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-right: 104px;
+}
+
+.footer__container-logos__git {
+ margin: 16px 26px 0 88px;
+ text-decoration: none;
+ color: #000;
+}
+
+.footer__container-logos__face {
+    width: 24px;
+    height: 24px;
+    margin-top: 15px;
+}
