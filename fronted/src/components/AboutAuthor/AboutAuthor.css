@@ -1,5 +1,5 @@
 .aboutAuthor {
-    width: 1440px;
+    max-width: 1440px;
     height: 624px;
     opacity: 1;
     display: flex;
@@ -40,3 +40,37 @@
     width: 550px;
 }
 
+@media (max-width: 1279px ) {
+    .aboutAuthor {
+        width: 768px;
+        height: 354px;
+    }
+
+    .aboutAuthor__container-img {
+        width: 232px;
+        height: 232px;
+        opacity: 1;
+        margin: 61px 32px 40px
+    }
+
+    .aboutAuthor__container-img__img {
+        width: 100%;
+        border-radius: 100%;
+    }
+
+    .aboutAuthor__container-text {
+    margin-top: 40px;
+    }
+
+    .aboutAuthor__container-text__title {
+        font-family: "Roboto Slab", sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 10px;
+        letter-spacing: 0px;
+    }
+
+    .aboutAuthor__container-text__paragraph {
+        width: 424px;
+    }
+}

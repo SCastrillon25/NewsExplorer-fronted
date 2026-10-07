@@ -112,3 +112,63 @@
     right: 0px;
     padding: 0px;
 }
+
+@media (max-width: 1279px ) {
+    .newsSearch {
+        width: 768px;
+        margin-top: 38px;
+    }
+
+    .newsSearch__container-fondo {
+        width: 768px;
+        height: 295px;
+    }
+
+    .newsSearch__container-fondo__img {
+        width: 768px;
+        height: 400px;
+    }
+
+    .newsSearch__container-fondo__shadow {
+        width: 768px;
+        height: 400px;
+    }
+
+    .newsSearch__search__title {
+        width: 385px;
+        height: auto;
+        font-size: 36px;
+        line-height: 40px;
+        margin-bottom: 16px;
+        margin-top: 0;
+    }
+
+    .newsSearch__search__subtitle {
+        width: 452px;
+        margin-bottom: 48px;
+        text-align: start;
+    }
+
+    .newsSearch__search {
+        width: 452px;
+        position: absolute ;
+        top: 104;
+
+    }
+
+    .newsSearch__search__form {
+        margin-bottom: 48px;
+        width: 452px;
+        height: 56px;
+    }
+
+    .newsSearch__search__form__text {
+        width: 315px;
+        height: 56px;
+    }
+
+    .newsSearch__search__form__submit {
+        width: 160px;
+        height: 56px;
+    }
+}

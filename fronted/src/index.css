@@ -1,6 +1,13 @@
 body {
   margin: 0 auto;
-  max-width: 100vw;  
+  max-width: 1440px;  
+  min-width: 320px;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 1279px ) {
+  body {
+      width: 768px;
+  }
 }

@@ -7,7 +7,6 @@
     box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
     position: relative;
     width: 1440px;
-    height: 80px;
     opacity: 1;
 }
 
@@ -63,4 +62,31 @@
     border-radius: 100px;
     border-width: 1px;
 
+}
+
+@media (max-width: 1279px ) {
+  .navBar {
+      width: 768px;
+      height: 66px;
+      align-items: center;
+  }
+
+  .navBar__title {
+    margin-left: 40px;
+    margin-top: 22px;
+  }
+
+  .navBar__buttons {
+    margin-right: 40px;
+    margin-top: 14px;
+  }
+
+  .navBar__button-home {
+    margin-right: 16px;
+    height: 57px;
+  }
+
+  .navBar__button-signIn {
+    margin-bottom: 12px;
+  }
 }

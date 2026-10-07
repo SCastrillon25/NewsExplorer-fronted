@@ -1,0 +1,29 @@
+.main {
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(245, 246, 247, 1);
+
+}
+.main__title {
+    margin-top: 80px;
+    margin-left: 104px;
+    margin-bottom: 64px;
+    position: relative;
+    left: 0;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46px;
+    letter-spacing: 0px;
+}
+
+.newsCardList {
+    margin: 0;
+    padding-left: 104px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: wrap;
+}
