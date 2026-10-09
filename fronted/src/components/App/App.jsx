@@ -3,7 +3,9 @@ import { NewsSearch } from "../NewsSearch/NewsSearch";
 import { Main } from "../Main/Main";
 import { AboutAuthor } from "../AboutAuthor/AboutAuthor";
 import { Footer } from "../Footer/Footer";
+import { Preloader } from "../Preloader/Preloader";
 import "./App.css";
+import { NotFound } from "../NotFound/NotFound";
 
 
 function App() {
@@ -13,6 +15,9 @@ function App() {
       <NavBar />
       
       <NewsSearch />
+
+      <Preloader />
+      <NotFound />
 
       <Main />
 

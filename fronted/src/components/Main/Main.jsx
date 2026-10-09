@@ -10,11 +10,8 @@ function Main() {
                 <NewsCard />
                 <NewsCard />
                 <NewsCard />
-                <NewsCard />
-                <NewsCard />
-                <NewsCard />
             </ul>
-
+            <button className="main__buttonShowMore" type="button">Show more</button>
         </main>
      );
 }
