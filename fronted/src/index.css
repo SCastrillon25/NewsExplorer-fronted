@@ -1,9 +1,7 @@
 @import url(../dist/vendor/fonts.css);
-
 @import url(./components/NavBar/NavBar.css);
 @import url(./components//NewsSearch/NewsSearch.css);
 @import url(./components/AboutAuthor/AboutAuthor.css);
 @import url(./components/Main/Main.css);
-@import url(./components/Main/Components/NewsCard/NewsCard.css);
-
+@import url(./components/SearchResults/NewsCard/NewsCard.css);
 @import url(./components/Preloader/preloader.css);
