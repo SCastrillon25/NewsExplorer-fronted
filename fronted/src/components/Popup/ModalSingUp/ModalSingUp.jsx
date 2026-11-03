@@ -1,14 +1,35 @@
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./ModalSignUp.css";
 
-function ModalSignUp() {
-    const navigate = useNavigate();
 
-    function handleSubmit(e) {
+function ModalSignUp({ handleRegister }) {
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+        username: "",
+    });
+
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+        console.log(formData);
+    };
+    
+
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        navigate("/success")
-    }
+        handleRegister ({
+            email: formData.email,
+            password: formData.password,
+            username: formData.username,
+        });        
+    };
 
 
     return ( 
@@ -21,7 +42,8 @@ function ModalSignUp() {
                         className="form__input"
                         type="email"
                         placeholder="Email" 
-                        name="email"                       
+                        name="email"
+                        onChange={handleChange}                       
                     />                    
                     <span className="form__error">Por favor, rellena este campo.</span>
                 </label>
@@ -32,7 +54,8 @@ function ModalSignUp() {
                         className="form__input"
                         type="password"
                         placeholder="Enter password" 
-                        name="password"           
+                        name="password"
+                        onChange={handleChange}             
                     />
                     <span className="form__error">Por favor, rellena este campo.</span>
                 </label>
@@ -43,7 +66,8 @@ function ModalSignUp() {
                         className="form__input"
                         type="text"
                         placeholder="Enter your usename" 
-                        name="username"           
+                        name="username"
+                        onChange={handleChange}             
                     />
                     <span className="form__error error-no-vailable">This username is not available</span>
                 </label>

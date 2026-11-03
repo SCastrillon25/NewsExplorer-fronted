@@ -1,15 +1,22 @@
 import "./NewsSearch.css";
 
-const handleSubmit = (e) => {
+
+function NewsSearch({handleSearch}) {
+    const handleSubmit = (e) => {
     e.preventDefault();
 
     const form = e.target;
-    const keyWord = form.elements.keyword.value;
+    const keyWord = form.elements.keyword.value.trim();
+
+    if (!keyWord) {
+        return;
+    }
+
+    handleSearch(keyWord);
 
     console.log("buscando", keyWord);
 }
 
-function NewsSearch() {
     return (    
         <div className="newsSearch">
             <div className="newsSearch__container-fondo">

@@ -6,8 +6,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
     position: relative;
-    width: 100%;
-   
+    width: 100%;   
 }
 
 .navBar__title {
@@ -27,26 +26,29 @@
     flex-direction: row;
     font: "Roboto slab", serif;
     margin: 15px 104px 0 0;
-     color: rgba(26, 27, 34, 1);
+    color: rgba(26, 27, 34, 1);
+    text-decoration-line: none;
+    background-color: transparent;
 }   
 
 
 .navBar__button-home {
   opacity: rgba(26, 27, 34, 1);
-   color: rgba(26, 27, 34, 1);
-    margin-right: 42px;
-    font-family: "Roboto slab", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0px;
-    text-justify: top;
-    vertical-align: middle; 
-    background-color: transparent; 
-    opacity: 1;  
-    border: none;
-    border-bottom: 3px solid rgba(255, 255, 255, 1);
-    height: 60px;
+  color: rgba(255, 255, 255, 1);
+  margin-right: 42px;
+  font-family: "Roboto slab", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-justify: top;
+  vertical-align: middle; 
+  background-color: transparent; 
+  opacity: 1;  
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+  height: 100%;
+  text-decoration-line: none;
 }
 
 .navBar__button-signIn {
@@ -64,7 +66,35 @@
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 100px;
     border-width: 1px;
+}
 
+
+.navBar__button-logout {
+  width: 112px;
+  height: 40px;
+  opacity: 1;
+  border-width: 1px;
+  border-radius: 100px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: start;
+  margin-top: 0px;
+  margin-left: 32px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 1);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+@media (min-width: 481px) {
+ .navBar__button-phoneVist {
+    display: none;
+  } 
 }
 
 @media (max-width: 1279px ) {
@@ -72,6 +102,7 @@
       width: 768px;
       height: 66px;
       align-items: center;
+
   }
 
   .navBar__title {
@@ -92,4 +123,43 @@
   .navBar__button-signIn {
     margin-bottom: 12px;
   }
+
+}
+
+@media (max-width: 800px ) {
+  .navBar {
+    width: 320px;
+    height: 56px;
+    justify-self: center;
+  }
+
+  .navBar-darck-style {
+    width: 320px;
+    height: 56px;
+    justify-self: center;
+  }
+
+  .navBar__title {
+    margin-left: 40px;
+  }
+
+  .navBar__button-home {
+    display: none;
+  }
+
+  .navBar__button-signIn {
+    display: none;
+  }
+
+  .navBar__button-saved-darck-style {
+    display: none;
+  }
+  .navBar___button-phoneVist {
+    display: inline;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    align-self: center;
+  }  
 }

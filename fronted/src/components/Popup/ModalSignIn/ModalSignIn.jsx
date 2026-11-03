@@ -1,9 +1,33 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./ModalSignIn.css"
 
-function ModalSignIn() {
+function ModalSignIn({ handleLoguin }) {
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+        console.log(formData);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        handleLoguin({
+            email: formData.email,
+            password: formData.password,
+        });
+    };
+
     return ( 
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
             <fieldset className="form__set">
     
                 <label className="form__field form__field-no-margin">
@@ -12,7 +36,8 @@ function ModalSignIn() {
                         className="form__input"
                         type="email"
                         placeholder="Email" 
-                        name="email"                       
+                        name="email"
+                        onChange={handleChange}                       
                     />                    
                     <span className="form__error">Por favor, rellena este campo.</span>
                 </label>
@@ -23,13 +48,14 @@ function ModalSignIn() {
                         className="form__input"
                         type="password"
                         placeholder="........" 
-                        name="password"           
+                        name="password"  
+                        onChange={handleChange}             
                     />
                     <span className="form__error">Por favor, rellena este campo.</span>
                 </label>
                 
                 <button 
-                    className="form__input form__input-submit" 
+                    className="form__field form__input form__input-submit" 
                     type="submit" 
                 >
                     Sign in

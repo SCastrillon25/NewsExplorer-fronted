@@ -6,10 +6,10 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer__container">
-                <p>&copy; 2026 Supersite. Powered by News API</p>
+                <p className="footer__container__text">&copy; 2026 Supersite. Powered by News API</p>
             </div>
             <div className="footer__container-logos">
-                <p>Home</p>
+                <p className="footer__container-logos__home">Home</p>
                 <a 
                     className="footer__container-logos__git"
                     href="https://github.com/SCastrillon25"

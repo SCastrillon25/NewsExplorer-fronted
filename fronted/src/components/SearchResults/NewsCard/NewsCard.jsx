@@ -1,34 +1,49 @@
-import imageNews from "../../../assets/imageNews.jpg";
 import bookmarkIcon from "../../../assets/bookmark.svg";
 import trashIcon from "../../../assets/trash.svg";
 import "./NewsCard.css";
 
-function NewsCard({register}) {
+function NewsCard({register, article, keyword, isHome, isLogin, isSavedNews, handleSaveArticle, handleDeleteArticle}) {
+    const handleImageError = (event) => {
+        event.currentTarget.style.display = "none";
+    };
+    
     return ( 
         <li className="newsCard">
-            <img className="newsCard__image" src={imageNews} alt="image-news" />
-            {register && <p>Naturaleza</p>}
-            
+            <div className="newsCard__container">
+                <img 
+                    className="newsCard__container-image"     
+                    src={article.image} 
+                    onError={handleImageError}
+                    alt="image-news" 
+                />
+            </div>
+           {register && <p className="newsCard__keyword" >{keyword}</p>}
             <button 
+                onClick={isHome & isLogin ? () => handleSaveArticle(article) : () => handleDeleteArticle(article._id)}
                 className="newsCard__button" 
                 type="button">
                     <img 
-                        src={!register ? bookmarkIcon : trashIcon}
-                        className="newsCard__button__image" ></img>
-                
+                        src={isHome ? bookmarkIcon : trashIcon}
+                        className="newsCard__button__image" 
+                        alt=""/>                
             </button>
-            <p className="newsCard__hover">{!register ? "Sign in to save article" : "Removed from saved"}</p>
-            <div className="newsCard__date">fecha</div>
+            <p 
+                className="newsCard__hover">{
+                isLogin && !isHome 
+                ? "Removed from saved" 
+                : "Sign in to save article"}</p>
+            <div className="newsCard__date"> 
+                {article.published_at
+                    ? new Date(article.published_at).toLocaleDateString("es-CO")
+                    : ""}
+            </div>
             <div className="newsCard__titleNews">
-                Everyone Needs a Special 'Sit Spot' in Nature
+                {article.title}
             </div>
             <div className="newsCard__news">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Animi, labore ad? Ullam maxime quasi eum, reiciendis 
-                velit magnam iusto necessitatibus quibusdam distinctio repellendus aspernatur asperiores 
-                voluptas mollitia consequuntur deserunt inventore!
+                {article.description}
             </div>
-            <div className="newsCard__reference">Reference</div>
+            <div className="newsCard__reference">{article.source}</div>
         </li>
      );
 }
